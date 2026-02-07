@@ -11,7 +11,7 @@
 #include "mt7981.dtsi"
 
 / {
-	model = "5G CPE MT7981_AX3000";
+	model = "5G CPE_ZX7981PD";
 	compatible = "cmcc,rax3000m-stock", "mediatek,mt7981";
 
 	aliases {
