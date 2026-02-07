@@ -2430,7 +2430,7 @@ define Device/5g_cpe_zx7981pd
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pd
 
-define Device/5g_cpe_zx7981pdg
+define Device/5g_cpe_zx7981pg
   DEVICE_VENDOR := 5G_CPE
   DEVICE_MODEL := ZX7981PG
   DEVICE_VARIANT := (MTK layout)
