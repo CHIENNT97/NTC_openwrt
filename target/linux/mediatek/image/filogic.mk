@@ -2448,7 +2448,7 @@ define Device/5g_cpe_zx7981pge
   DEVICE_VENDOR := 5G_CPE
   DEVICE_MODEL := ZX7981PGE
   DEVICE_VARIANT := (MTK layout)
-  DEVICE_DTS := mt7981b-zx7981pg-stock
+  DEVICE_DTS := mt7981b-wirelesstag-zx7981pge
   DEVICE_DTS_DIR := ../dts
   DEVICE_PACKAGES := kmod-usb3 f2fsck mkf2fs
   BLOCKSIZE := 128k
