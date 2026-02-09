@@ -134,15 +134,12 @@
 		};
 	};
 
-
+	// FAKE ETH1 interface dedicated to USB Offload
 	gmac1: mac@1 {
 		compatible = "mediatek,eth-mac";
 		reg = <1>;
 		phy-mode = "gmii";
 		phy-handle = <&int_gbe_phy>;
-
-		nvmem-cells = <&macaddr_factory_24 0>;
-		nvmem-cell-names = "mac-address";
 	};
 };
 
