@@ -2457,3 +2457,17 @@ define Device/5g_cpe_zx7981pge
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pge
+
+define Device/5g_cpe_zx7981pm
+  DEVICE_VENDOR := 5G_CPE
+  DEVICE_MODEL := ZX7981PM
+  DEVICE_VARIANT := (MTK layout)
+  DEVICE_DTS := zx7981pm
+  DEVICE_DTS_DIR := ../dts
+  DEVICE_PACKAGES := kmod-usb3 f2fsck mkf2fs
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 116736k
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += 5g_cpe_zx7981pm
