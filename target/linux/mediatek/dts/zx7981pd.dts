@@ -11,12 +11,10 @@
 #include "mt7981.dtsi"
 
 / {
-	model = "5G CPE_ZX7981PD";
+	model = "5G CPE By NTC";
 	compatible = "cmcc,rax3000m-stock", "mediatek,mt7981";
 
 	aliases {
-		ethernet0 = &gmac0;
-		ethernet1 = &gmac1;
 		serial0 = &uart0;
 	};
 
@@ -45,59 +43,59 @@
 		};
 	};
 
-    gpio-leds {
+	gpio-leds {
 		compatible = "gpio-leds";
 
-      	led-0 {
+		led-0 {
 			label = "wt:4g:green";
 			color = <LED_COLOR_ID_GREEN>;
 			gpios = <&pio 11 GPIO_ACTIVE_HIGH>;
 			default-state = "off";
 		};
-        
-        led-1 {
+
+		led-1 {
 			label = "wt:5g:yellow";
-            color = <LED_COLOR_ID_YELLOW>;
+			color = <LED_COLOR_ID_YELLOW>;
 			gpios = <&pio 13 GPIO_ACTIVE_HIGH>;
 			default-state = "off";
-        };
+		};
 
-        led-2 {
+		led-2 {
 			label = "wt:5g:blue";
-            color = <LED_COLOR_ID_BLUE>;
+			color = <LED_COLOR_ID_BLUE>;
 			gpios = <&pio 9 GPIO_ACTIVE_HIGH>;
 			default-state = "off";
-        };
+		};
 
-        led-3 {
+		led-3 {
 			label = "wt:wifi:blue";
-            color = <LED_COLOR_ID_BLUE>;
+			color = <LED_COLOR_ID_BLUE>;
 			gpios = <&pio 4 GPIO_ACTIVE_HIGH>;
-			default-state = "off";
-        };
+			default-state = "on";
+		};
 
-        led-4 {
+		led-4 {
 			label = "wt:power:blue";
-            color = <LED_COLOR_ID_BLUE>;
+			color = <LED_COLOR_ID_BLUE>;
 			function = LED_FUNCTION_POWER;
 			gpios = <&pio 5 GPIO_ACTIVE_HIGH>;
 			default-state = "on";
-        };
+		};
 
-        led-5 {
+		led-5 {
 			label = "wt:4g:blue";
-            color = <LED_COLOR_ID_BLUE>;
+			color = <LED_COLOR_ID_BLUE>;
 			gpios = <&pio 12 GPIO_ACTIVE_HIGH>;
 			default-state = "off";
-        };
+		};
 
-        led-6 {
+		led-6 {
 			label = "wt:4g:yellow";
-            color = <LED_COLOR_ID_YELLOW>;
+			color = <LED_COLOR_ID_YELLOW>;
 			gpios = <&pio 10 GPIO_ACTIVE_HIGH>;
 			default-state = "off";
-        };
-    };
+		};
+	};
 
 	gpio-export {
 		compatible = "gpio-export";
@@ -123,8 +121,7 @@
 		compatible = "mediatek,eth-mac";
 		reg = <0>;
 		phy-mode = "2500base-x";
-
-		nvmem-cells = <&macaddr_factory_2a 0>;
+		nvmem-cells = <&macaddr_factory_24 (-1)>;
 		nvmem-cell-names = "mac-address";
 
 		fixed-link {
@@ -295,7 +292,6 @@
 		};
 	};
 };
-
 
 &uart0 {
 	status = "okay";
