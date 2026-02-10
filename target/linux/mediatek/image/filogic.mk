@@ -2422,10 +2422,12 @@ define Device/5g_cpe_zx7981pd
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := zx7981pd
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-usb3 f2fsck mkf2fs
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware kmod-usb3 mt7981-wo-firmware
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   IMAGE_SIZE := 116736k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pd
@@ -2436,10 +2438,12 @@ define Device/5g_cpe_zx7981pg
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := mt7981b-zx7981pg-stock
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-usb3 f2fsck mkf2fs
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware kmod-usb3 mt7981-wo-firmware
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   IMAGE_SIZE := 116736k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pg
@@ -2450,10 +2454,12 @@ define Device/5g_cpe_zx7981pge
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := mt7981b-wirelesstag-zx7981pge
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-usb3 f2fsck mkf2fs
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware kmod-usb3 mt7981-wo-firmware
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   IMAGE_SIZE := 116736k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pge
@@ -2464,10 +2470,12 @@ define Device/5g_cpe_zx7981pm
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := zx7981pm
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-usb3 f2fsck mkf2fs
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware kmod-usb3 mt7981-wo-firmware
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   IMAGE_SIZE := 116736k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pm
@@ -2478,10 +2486,12 @@ define Device/5g_cpe_zx7981pde
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := zx7981pde
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-usb3 f2fsck mkf2fs
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware kmod-usb3 mt7981-wo-firmware
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   IMAGE_SIZE := 116736k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pde
