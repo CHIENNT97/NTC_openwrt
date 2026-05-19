@@ -2759,9 +2759,9 @@ define Device/5g_cpe_zx7981pm
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pm
 
-define Device/Quantum_5G_CPE v3
+define Device/Quantum_5G_CPE_v3
   DEVICE_VENDOR := Quantum
-  DEVICE_MODEL := 5G_CPE v3
+  DEVICE_MODEL := 5G_CPE_v3
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := 5g-cpe-v3
   DEVICE_DTS_DIR := ../dts
@@ -2773,4 +2773,4 @@ define Device/Quantum_5G_CPE v3
   IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
-TARGET_DEVICES += Quantum_5G_CPE v3
+TARGET_DEVICES += Quantum_5G_CPE_v3
