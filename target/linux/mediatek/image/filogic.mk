@@ -2758,3 +2758,19 @@ define Device/5g_cpe_zx7981pm
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += 5g_cpe_zx7981pm
+
+define Device/Quantum_5G_CPE v3
+  DEVICE_VENDOR := Quantum
+  DEVICE_MODEL := 5G_CPE v3
+  DEVICE_VARIANT := (MTK layout)
+  DEVICE_DTS := 5g-cpe-v3
+  DEVICE_DTS_DIR := ../dts
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware kmod-usb3 mt7981-wo-firmware
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 116736k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += Quantum_5G_CPE v3
