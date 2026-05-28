@@ -2766,9 +2766,9 @@ endif
 endef
 TARGET_DEVICES += wirelesstag_zx7981pd-ubootmod
 
-define Device/5g_cpe_zx7981pd
+define Device/5g_cpe_V1
   DEVICE_VENDOR := 5G_CPE
-  DEVICE_MODEL := ZX7981PD
+  DEVICE_MODEL := V1
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := zx7981pd
   DEVICE_DTS_DIR := ../dts
@@ -2780,11 +2780,11 @@ define Device/5g_cpe_zx7981pd
   IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
-TARGET_DEVICES += 5g_cpe_zx7981pd
+TARGET_DEVICES += 5g_cpe_v1
 
-define Device/5g_cpe_zx7981pg
+define Device/5g_cpe_V2
   DEVICE_VENDOR := 5G_CPE
-  DEVICE_MODEL := ZX7981PG
+  DEVICE_MODEL := V2
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := mt7981b-zx7981pg-stock
   DEVICE_DTS_DIR := ../dts
@@ -2796,11 +2796,11 @@ define Device/5g_cpe_zx7981pg
   IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
-TARGET_DEVICES += 5g_cpe_zx7981pg
+TARGET_DEVICES += 5g_cpe_V2
 
-define Device/5g_cpe_zx7981pge
+define Device/5g_cpe_PGE_V2
   DEVICE_VENDOR := 5G_CPE
-  DEVICE_MODEL := ZX7981PGE
+  DEVICE_MODEL := PGE_V2
   DEVICE_VARIANT := (MTK layout)
   DEVICE_DTS := mt7981b-wirelesstag-zx7981pge
   DEVICE_DTS_DIR := ../dts
@@ -2812,7 +2812,7 @@ define Device/5g_cpe_zx7981pge
   IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
-TARGET_DEVICES += 5g_cpe_zx7981pge
+TARGET_DEVICES += 5g_cpe_pge_v2
 
 define Device/5g_cpe_zx7981pm
   DEVICE_VENDOR := 5G_CPE
