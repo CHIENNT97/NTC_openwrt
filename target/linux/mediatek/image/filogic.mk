@@ -2845,3 +2845,19 @@ define Device/Quantum_5G_CPE_v3
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += Quantum_5G_CPE_v3
+
+define Device/WS3009
+  DEVICE_VENDOR := WS3009
+  DEVICE_MODEL := 3_WAN
+  DEVICE_VARIANT := (MTK layout)
+  DEVICE_DTS := ws3009
+  DEVICE_DTS_DIR := ../dts
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware kmod-usb3 mt7981-wo-firmware
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 116736k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += WS3009
