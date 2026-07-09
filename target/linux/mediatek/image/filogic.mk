@@ -2905,3 +2905,20 @@ define Device/WS3009
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += WS3009
+
+define Device/Z8102
+  DEVICE_VENDOR := Z8102
+  DEVICE_MODEL := 5G
+  DEVICE_VARIANT := (MTK layout)
+  DEVICE_DTS := Z8102
+  DEVICE_DTS_DIR := ../dts
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware kmod-usb3 mt7981-wo-firmware
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 116736k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += Z8102
+
